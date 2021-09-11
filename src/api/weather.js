@@ -1,9 +1,19 @@
 import axios from "axios";
 
+axios.defaults.baseURL='https://api.openweathermap.org/data/2.5/';
+
+const apiKey = process.env.REACT_APP_API_KEY;
+
 function getWeather(location) {
   return axios.get(
-    `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&lang=pt_br&appid=${process.env.REACT_APP_API_KEY}`
+    `weather?q=${location}&units=metric&lang=pt_br&appid=${apiKey}`
   );
 } 
 
-export {getWeather}
+function getForecast(lat, lon) {
+  return axios.get(
+    `onecall?lat=${lat}&lon=${lon}&units=metric&lang=pt_br&appid=${apiKey}`
+  )
+  }
+
+export {getWeather, getForecast}

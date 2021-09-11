@@ -2,10 +2,10 @@ import React from "react";
 // import { getWeather } from "../api/weather.js";
 
 class SearchBar extends React.Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
     
-  }
+  // }
 
   onChange(e) {
     this.props.inputChange(e);
@@ -31,7 +31,7 @@ class SearchBar extends React.Component {
             onChange={(e) => this.onChange(e)}
           ></input>
           <button type="submit" className="btn">
-            <i class="fas fa-search"></i>
+            <i className="fas fa-search"></i>
           </button>
         </form>        
       </div>
