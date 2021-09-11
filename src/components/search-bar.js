@@ -1,5 +1,7 @@
 import React from "react";
 // import { getWeather } from "../api/weather.js";
+import './search-bar.css'
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class SearchBar extends React.Component {
   // constructor(props) {
@@ -20,19 +22,23 @@ class SearchBar extends React.Component {
     const location = this.props.location;
 
     return (
-      <div>
-        <form onSubmit={(e) => this.onSubmit(e)}>
+      <div className='search-bar'>
+        <form className='input-group mb-3' 
+        onSubmit={(e) => this.onSubmit(e)}>
           <input
             type="text"
+            className="form-control"
             name="busca"
             id="busca"
             placeholder="Digite uma cidade"
             value={location}
             onChange={(e) => this.onChange(e)}
           ></input>
-          <button type="submit" className="btn">
+          <div className="input-group-append">
+            <button type="submit" className="btn btn-outline-secondary" id='btn'>
             <i className="fas fa-search"></i>
           </button>
+          </div>          
         </form>        
       </div>
     );

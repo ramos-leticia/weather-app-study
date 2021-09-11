@@ -9,13 +9,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      location: "",
+      location: "Rio de Janeiro",
       temp: "",
       feels_like: "",
       description: "",
       icon: "",
       forecast: []
     };
+    this.onSubmit();
   }
 
   onChange(e) {
