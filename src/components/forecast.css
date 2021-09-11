@@ -1,0 +1,33 @@
+.forecast-comp {
+    /* background: var(--other-bg); */
+    display: block;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+
+.forecast-comp-items {
+    display: flex;
+    font-size: 1rem;
+    overflow-y: scroll;
+}
+
+.forecast-items-ampm{
+    margin: 0;
+    font-size: .8rem;
+}
+
+.forecast-items-temp {
+    margin: 0;
+}
+
+.forecast-items-weather {
+    margin: 0;
+}
+
+.title {
+    /* margin-top: 1rem; */
+    margin-bottom: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}

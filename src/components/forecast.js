@@ -1,9 +1,10 @@
 import React from "react";
+import "./forecast.css";
 
 class Forecast extends React.Component {
   render() {
     const forecastItems = this.props.hourly.map((f, i) => {
-        const key = `forecast-item_${i}`;
+      const key = `forecast-item_${i}`;
       const url = `http://openweathermap.org/img/wn/${f.weather[0].icon}@2x.png`;
 
       let ampm = "AM";
@@ -14,11 +15,11 @@ class Forecast extends React.Component {
       }
 
       return (
-        <div className="forecast-items" key={key} >
+        <div className="forecast-items" key={key}>
           <p className="forecast-items-ampm">
             {hour}:00 {ampm}
           </p>
-          <p className="forecast-items-temp">{f.temp}</p>
+          <p className="forecast-items-temp">{f.temp} °C</p>
           <img
             className="forecast-icon"
             src={url}
@@ -30,9 +31,12 @@ class Forecast extends React.Component {
     });
 
     return (
-    <div className="forecast-comp">
-        {forecastItems}
-    </div>
+      <div className='carousel-inner'>
+        <div className="forecast-comp">
+          <h3 className="title">Previsão horária</h3>
+          <div className="forecast-comp-items">{forecastItems}</div>
+        </div>
+      </div>
     );
   }
 }

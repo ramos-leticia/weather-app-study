@@ -3,7 +3,16 @@ import "./current.css";
 
 class CurrentWeather extends React.Component {
   render() {
+    let img;
     const url = `http://openweathermap.org/img/wn/${this.props.icon}@4x.png`;
+    if (this.props.icon) {
+      img = (
+        <img className="current-icon" 
+            src={url} 
+            alt={this.props.description}/>
+      )
+    }
+    
 
     return (
       <div className="current-weather">
@@ -11,11 +20,9 @@ class CurrentWeather extends React.Component {
           <div className="main-text">
             <p className="temp">{this.props.currentTemp} °C
             </p>
-            <p className="description">{this.props.description}</p>
-            <img className="current-icon" 
-            src={url} 
-            alt={this.props.description}/>
+            <p className="description">{this.props.description}</p>            
           </div>
+          {img}
         </div>
         <div>
           <p className="feels-like">
