@@ -2,27 +2,26 @@
   --sb: rgb(32, 32, 32);
   --sb-text: beige;
   --fas: rgb(136, 135, 135);
-  --other-bg: rgb(59, 59, 59);
+  --other-bg: ;
 }
-/* * {
+* {
   margin: 0;
-} */
+}
 
 body {
     height: 100vh;
 }
 
 .search-bar {
-  /* padding: 3rem 10rem 4rem; */
+  margin-top: 5rem;
   background-color: var(--sb);
   color: var(--sb-text);
-  max-width: 75%;
-  margin-top: 50px;
+  max-width: 100%;
   
 }
 
 #busca {
-  background-color: var(--other-bg);
+  background-color: rgb(59, 59, 59);
   border: 0;
   border-radius: 20px 0 0 20px; /* top-left top-right bottom-right bottom-left */
 }
@@ -30,7 +29,7 @@ body {
 #btn {
   border-radius: 0 20px 20px 0;
   border: .5px solid;
-  border-color: var(--other-bg);
+  border-color: rgb(59, 59, 59);
 }
 
 .fas {

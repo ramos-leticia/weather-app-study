@@ -1,4 +1,5 @@
 import React from "react";
+import "./current.css";
 
 class CurrentWeather extends React.Component {
   render() {
@@ -7,12 +8,19 @@ class CurrentWeather extends React.Component {
     return (
       <div className="current-weather">
         <div className="main-content">
-          <p className="temp">{this.props.currentTemp}</p>
-          <p className="description">{this.props.description}</p>
-          <img className="current-icon" src={url} alt="" />
+          <div className="main-text">
+            <p className="temp">{this.props.currentTemp} °C
+            </p>
+            <p className="description">{this.props.description}</p>
+            <img className="current-icon" 
+            src={url} 
+            alt={this.props.description}/>
+          </div>
         </div>
         <div>
-          <p className="feels-like">Sensação térmica {this.props.feelsLike}</p>
+          <p className="feels-like">
+            Sensação térmica: {this.props.feelsLike} °C
+          </p>
         </div>
       </div>
     );

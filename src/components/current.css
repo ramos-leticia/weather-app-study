@@ -1,0 +1,49 @@
+:root {
+    --sb: rgb(32, 32, 32);
+    --sb-text: beige;
+    --fas: rgb(136, 135, 135);
+    --other-bg: rgba(255, 255, 255, 0.103);
+  }
+
+.current-weather {
+    background-color: var(--other-bg);
+    border-radius: 30px;
+    display: flex;
+    padding: 1.9rem;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content,
+.feels-like {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.main-content{
+display: flex;
+align-items: center;
+}
+
+.temp {
+margin: 0;
+font-size: 1.7rem;
+margin-top: .7rem;
+}
+
+.description {
+    font-size: 1.5rem;
+}
+
+.current-icon {
+    width: 150px;
+    margin: 0;
+    padding: 0;
+}
+
+.feels-like {
+    margin: 0;
+    font-size: .9rem;
+}
