@@ -2,7 +2,7 @@
   --sb: rgb(32, 32, 32);
   --sb-text: beige;
   --fas: rgb(136, 135, 135);
-  --other-bg: ;
+  /* --other-bg: ; */
 }
 * {
   margin: 0;
@@ -14,13 +14,12 @@ body {
 
 .search-bar {
   margin-top: 5rem;
-  /* background-color: var(--sb); */
   color: var(--sb-text);
   max-width: 100%;  
 }
 
 #busca {
-  background-color: rgb(59, 59, 59);
+  background-color: rgb(192, 192, 192);
   border: 0;
   border-radius: 20px 0 0 20px; /* top-left top-right bottom-right bottom-left */
 }

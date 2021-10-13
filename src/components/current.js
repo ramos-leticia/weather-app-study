@@ -18,7 +18,7 @@ class CurrentWeather extends React.Component {
       <div className="current-weather">
         <div className="main-content">
           <div className="main-text">
-            <p className="temp">{this.props.currentTemp} °C
+            <p className="temp">{Math.round(this.props.currentTemp)} °C
             </p>
             <p className="description">{this.props.description}</p>            
           </div>
@@ -26,7 +26,7 @@ class CurrentWeather extends React.Component {
         </div>
         <div>
           <p className="feels-like">
-            Sensação térmica: {this.props.feelsLike} °C
+            Sensação térmica: {Math.round(this.props.feelsLike)} °C
           </p>
         </div>
       </div>

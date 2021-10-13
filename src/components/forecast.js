@@ -19,7 +19,7 @@ class Forecast extends React.Component {
           <p className="forecast-items-ampm">
             {hour}:00 {ampm}
           </p>
-          <p className="forecast-items-temp">{f.temp} °C</p>
+          <p className="forecast-items-temp">{Math.round(f.temp)} °C</p>
           <img
             className="forecast-icon"
             src={url}
